@@ -1,0 +1,5 @@
+class Trending
+  
+  
+  
+end

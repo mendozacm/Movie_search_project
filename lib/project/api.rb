@@ -3,9 +3,12 @@ class Project::API
   API_KEY = 'cb09e4c3864336c419d217cc3e2f9387'
   
   def self.query_movie_db(query)
-   results = RestClient.get("#{BASE_URL}/genre/movie/list?api_key=#{API_KEY}")
- puts results.split( /, */ ).sort
-  #binding.pry
+   results = RestClient.get("#{BASE_URL}/trending/all/day?api_key=#{API_KEY}")
+
+ json = JSON.parse(results)
+ genres = results.split( /, */ )
+
+  binding.pry
   
   end
   
