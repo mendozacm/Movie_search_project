@@ -5,3 +5,5 @@ puts "hello world"
 require_relative "../lib/project"
 
 CLI.testing_method
+
+Project::CLI.new.call
