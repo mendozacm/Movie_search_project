@@ -22,7 +22,7 @@ class Project::CLI
     while input != "exit"
     
     puts "Enter the name on the list you'd like to know more about, type 'list' to see the trending movies again, or type 'exit':"
-      input = gets.strip.downcase
+      input = gets.strip
       case input
       
       when "Action" 

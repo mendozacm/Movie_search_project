@@ -7,8 +7,10 @@ class Project::API
 
  json = JSON.parse(results)
  
-
-  
+  json["results"].each do |movie_hash|
+    Project::Trending.new(movie_hash)
+  end
+ 
   
   end
   
