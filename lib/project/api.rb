@@ -6,9 +6,9 @@ class Project::API
    results = RestClient.get("#{BASE_URL}/trending/all/day?api_key=#{API_KEY}")
 
  json = JSON.parse(results)
- genres = results.split( /, */ )
+ 
 
-  binding.pry
+  
   
   end
   
