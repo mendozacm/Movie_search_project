@@ -1,10 +1,4 @@
-class CLI 
-  
-  def self.testing_method
-    puts "i work!"
-  end
-  
-end
+
 
 #CLI controller./
 class Project::CLI
@@ -12,7 +6,7 @@ class Project::CLI
   #bundles the 3 main functions of the CLI
   def call
     greeting
-    list_deals
+    list_genres
     menu
     goodbye
   end
@@ -23,9 +17,10 @@ class Project::CLI
   end
   
   #lists out the data
-  def list_deals
-    
-    puts "today only blah blah blah"
+  def list_genres
+    input = nil
+    puts "Pick your favortie genre and get a list of movies"
+    puts Project::API.query_movie_db(input)
   end
   
   #allows the user to interact with the data
@@ -46,7 +41,7 @@ class Project::CLI
           puts "More info on deal 2"
      
       when "list"
-        list_deals
+        list_genres
       
       when "exit"
         nil
