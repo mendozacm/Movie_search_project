@@ -11,14 +11,20 @@ class Project::CLI
   
   #bundles the 3 main functions of the CLI
   def call
+    greeting
     list_deals
     menu
     goodbye
   end
   
+  #greets user
+  def greeting
+    puts "what up"
+  end
+  
   #lists out the data
   def list_deals
-    puts "what up"
+    
     puts "today only blah blah blah"
   end
   
@@ -29,14 +35,25 @@ class Project::CLI
    #keeps the program in a loop until you type exit
     while input != "exit"
     
-    puts "Enter the number on list you'd like to know more about or type 'exit':"
+    puts "Enter the number on list you'd like to know more about, type 'list' to see info again or type 'exit':"
       input = gets.strip.downcase
       case input
+      
       when "1" 
           puts "More info on deal 1..."
+      
       when "2"
           puts "More info on deal 2"
+     
+      when "list"
+        list_deals
       
+      when "exit"
+        nil
+      
+      
+      else
+        puts "Sorry, not a valid option"
       end
     end
   end
