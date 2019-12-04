@@ -4,7 +4,7 @@ class Project::API
   
   def self.query_movie_db(query)
    results = RestClient.get("#{BASE_URL}/genre/movie/list?api_key=#{API_KEY}")
-  
+ puts results.split( /, */ ).sort
   #binding.pry
   
   end
