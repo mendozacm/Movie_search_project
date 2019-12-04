@@ -2,26 +2,26 @@ class Project::CLI
   
   def call
     greeting
-    list_genres
+    list_movies
     menu
     goodbye
   end
   
   def greeting
-    puts "Hello there! What genre of movies are you interested in today?"
+    puts "Hello there! Would you like to know more about todays trending movies?"
   end
   
-  def list_genres
+  def list_movies
     input = nil
-    puts "Pick your favortie genre and get a list of movies"
-    puts Project::API.query_movie_db(input)
+    puts "Here are todays trending movies:"
+    #puts Project::API.query_movie_db(input)
   end
   
   def menu
     input = nil
     while input != "exit"
     
-    puts "Enter the genre name on the list you'd like to know more about, type 'list' to see info again or type 'exit':"
+    puts "Enter the name on the list you'd like to know more about, type 'list' to see the trending movies again, or type 'exit':"
       input = gets.strip.downcase
       case input
       
@@ -32,7 +32,8 @@ class Project::CLI
           puts "More info on deal 2"
      
       when "list"
-        list_genres
+        list_movies
+        
       
       when "exit"
         nil
