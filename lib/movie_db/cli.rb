@@ -6,15 +6,22 @@ class MovieDB::CLI
   end
   
   def menu
-    puts "What trending movie would you like to know about? Your options are movie, tv, or person. If you pick wrong results will be from all. "
+        
+
+      puts "To see a list of todays trending movies just hit 'enter'?"
     
     input = gets.strip
      
      MovieDB::API.query_movie_db(input)
-    
-      MovieDB::Trending.all.each.with_index(1) do |m, i|
+     MovieDB::Trending.all.each.with_index(1) do |m, i|
       puts "#{i}. #{m. title}"
+      
       end
+      
+      puts "What movie would you like to know more about?"
+      input = gets.strip
+      movie = MovieDB::Trending.all[input.to_i - 1]
+      MovieDB::Trending.query_single_movie(movie)
   end
     
   end

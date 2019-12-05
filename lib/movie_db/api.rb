@@ -10,4 +10,12 @@ class MovieDB::API
       MovieDB::Trending.new(trending_hash)
     end
   end
+  def self.query_single_movie(query)
+   results = RestClient.get("#{BASE_URL}/movie/#{movie.id}?api_key=#{API_KEY}")
+
+    json = JSON.parse(results)
+    json["results"]. each do |trending_hash|
+      MovieDB::Trending.new(trending_hash)
+    end
+  end
 end
