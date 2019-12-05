@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "project/version"
+require "MovieDB/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "project"
-  spec.version       = Project::VERSION
+  spec.name          = "MovieDB"
+  spec.version       = MovieDB::VERSION
   spec.authors       = ["'Cesar Mendoza'"]
   spec.email         = ["'mendoza.cesar92@gmail.com'"]
 

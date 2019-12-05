@@ -1,3 +1,3 @@
-module Project
+module MovieDB
   VERSION = "0.1.0"
 end
