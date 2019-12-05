@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    project (0.1.0)
+    MovieDB (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -39,10 +39,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  MovieDB!
   bundler (~> 2.0)
   httparty
   json
-  project!
   pry
   rake (~> 10.0)
   rest-client

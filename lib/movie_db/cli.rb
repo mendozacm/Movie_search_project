@@ -21,7 +21,11 @@ class MovieDB::CLI
       puts "What movie would you like to know more about?"
       input = gets.strip
       movie = MovieDB::Trending.all[input.to_i - 1]
-      MovieDB::Trending.query_single_movie(movie)
+      MovieDB::API.query_single_movie(movie)
+      
+      puts "Revenue: #{movie.revenue}"
+      puts "Budget: #{movie.budget}"
+      puts "Tagline: #{movie.tagline}"
   end
     
   end
