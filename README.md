@@ -1,15 +1,13 @@
-# Project
+# Movie_search_project
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/project`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Hello, this gem is a gem that allows you to see what movies are trending today, based off the MovieDB api I used. You should be able to run the gem and it will prompt you to hit the 'enter' key for the trending movies to appear, next it will ask you which movie you want to know more about and you just simply type the nubmer of the movie in the list to get some additional information.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'project'
+gem 'Movie_search_project'
 ```
 
 And then execute:
@@ -18,11 +16,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install project
+    $ gem install Movie_search_project
 
 ## Usage
 
-TODO: Write usage instructions here
+Just hit enter and type in the number of the movie you wish to know more about.
 
 ## Development
 
