@@ -18,7 +18,7 @@ class MovieDB::CLI
       
       end
       
-      puts "What movie would you like to know more about?"
+      puts "What movie would you like to know more about? Just type in the number of the movie on the list!"
       input = gets.strip
       movie = MovieDB::Trending.all[input.to_i - 1]
       MovieDB::API.query_single_movie(movie)
