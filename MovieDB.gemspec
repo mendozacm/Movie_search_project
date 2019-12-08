@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "tests the prohect"
   spec.description   = "uses directions for initial set up to test"
-  spec.homepage      = "https://github.com/'upbeat-hacker-0790'/project"
+  spec.homepage      = "https://github.com/mendozacm/Movie_search_project"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/'upbeat-hacker-0790'/project"
-    spec.metadata["changelog_uri"] = "https://github.com/'upbeat-hacker-0790'/project"
+    spec.metadata["source_code_uri"] = "https://github.com/mendozacm/Movie_search_project"
+    spec.metadata["changelog_uri"] = "https://github.com/mendozacm/Movie_search_project"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
