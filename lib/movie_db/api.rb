@@ -6,7 +6,7 @@ class MovieDB::API
    results = RestClient.get("#{BASE_URL}/trending/movie/day?api_key=#{API_KEY}")
 
     json = JSON.parse(results)
-    json["results"]. each do |trending_hash|
+    json["results"].each do |trending_hash|
       MovieDB::Trending.new(trending_hash)
     end
   end
