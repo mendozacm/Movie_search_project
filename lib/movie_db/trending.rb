@@ -10,8 +10,9 @@ class MovieDB::Trending
   def update(args)
     args.each do |k,v|
         self.send("#{k}=", v) if self.respond_to?(k)
+    end
   end
-end
+  
   def self.all
     @@all
   end
