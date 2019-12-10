@@ -9,21 +9,13 @@ class MovieDB::CLI
   
   def menu
     puts "To see a list of todays trending movies just hit 'enter'"
-       input = nil 
-       while input != "exit"
-
-     
-    
-    input = gets.strip
-    
-    
-     
-     MovieDB::API.query_movie_db(input)
-     MovieDB::Trending.all.each.with_index(1) do |m, i|
-      puts "#{i}. #{m. title}"
-      
-      end
-    
+    input = nil 
+    while input != "exit"
+      input = gets.strip
+      MovieDB::API.query_movie_db(input)
+        MovieDB::Trending.all.each.with_index(1) do |m, i|
+          puts "#{i}. #{m. title}"
+        end
       puts "What movie would you like to know more about? Just type in the number of the movie on the list! Or type 'exit' to exit"
       
       input = gets.strip
@@ -40,8 +32,7 @@ class MovieDB::CLI
       else
         puts "I'm sorry, I think you hit the wrong key, hit enter to continue"
     
-  end
+      end
+    end
+  end 
 end
- end 
-
-  end
