@@ -6,15 +6,10 @@ class MovieDB::CLI
     menu
   end
   
-  def show_details(movie)
-    movie = MovieDB::Trending.all[input.to_i - 1]
-      MovieDB::API.query_single_movie(movie)
-      
-      puts "Vote_average: #{movie.vote_average}"
-      puts "Vote_count: #{movie.vote_count}"
-      puts "Release_date: #{movie.release_date}"
-      puts "hit 'enter' to continue"
-  end
+  #def show_details(input)
+    
+    
+  #end
   
   
   def menu
@@ -30,7 +25,12 @@ class MovieDB::CLI
       
       input = gets.strip
       if input.to_i > 0 && input.to_i <= MovieDB::Trending.all.length
-        show_details
+        movie = MovieDB::Trending.all[input.to_i - 1]
+      MovieDB::API.query_single_movie(movie)
+      puts "Vote_count: #{movie.vote_count}"
+      puts "Vote_average: #{movie.vote_average}"
+      puts "Release_date: #{movie.release_date}"
+      puts "hit 'enter' to continue"
       elsif input == "exit"
       puts "Goodbye, have a great day!!"
       else
@@ -39,4 +39,5 @@ class MovieDB::CLI
       end
     end
   end 
+  
 end
