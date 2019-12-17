@@ -6,7 +6,15 @@ class MovieDB::CLI
     menu
   end
   
-  def
+  def show_details(movie)
+    movie = MovieDB::Trending.all[input.to_i - 1]
+      MovieDB::API.query_single_movie(movie)
+      
+      puts "Vote_average: #{movie.vote_average}"
+      puts "Vote_count: #{movie.vote_count}"
+      puts "Release_date: #{movie.release_date}"
+      puts "hit 'enter' to continue"
+  end
   
   
   def menu
