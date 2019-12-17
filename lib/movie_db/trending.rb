@@ -1,5 +1,5 @@
 class MovieDB::Trending
-  attr_accessor :id, :vote_count, :vote_average,:title, :release_date, :budget, :revenue, :tagline
+  attr_accessor :id, :vote_count, :vote_average, :title, :release_date, :budget, :revenue, :tagline
    
     @@all = []
   def initialize(args)
